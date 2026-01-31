@@ -28,5 +28,10 @@
   },
   "nav": {
     "allCategories": "All"
+  },
+  "installed": {
+    "label": "Installed",
+    "markInstalled": "I have this",
+    "openApp": "Open App"
   }
 }

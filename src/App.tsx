@@ -6,9 +6,11 @@ import CategorySection from './components/category/CategorySection';
 import ScrollToTop from './components/ui/ScrollToTop';
 import ReloadPrompt from './components/ui/ReloadPrompt';
 import { categories, apps } from './data/apps';
+import { useInstalledApps } from './hooks/useInstalledApps';
 
 export default function App() {
   const sortedCategories = [...categories].sort((a, b) => a.order - b.order);
+  const { isInstalled, toggleInstalled } = useInstalledApps();
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -28,6 +30,8 @@ export default function App() {
                 key={category.id}
                 category={category}
                 apps={categoryApps}
+                isInstalled={isInstalled}
+                toggleInstalled={toggleInstalled}
               />
             );
           })}

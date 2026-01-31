@@ -28,5 +28,10 @@
   },
   "nav": {
     "allCategories": "전체"
+  },
+  "installed": {
+    "label": "설치됨",
+    "markInstalled": "설치 표시",
+    "openApp": "앱 열기"
   }
 }

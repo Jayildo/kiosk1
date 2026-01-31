@@ -28,5 +28,10 @@
   },
   "nav": {
     "allCategories": "すべて"
+  },
+  "installed": {
+    "label": "インストール済",
+    "markInstalled": "インストール済",
+    "openApp": "アプリを開く"
   }
 }

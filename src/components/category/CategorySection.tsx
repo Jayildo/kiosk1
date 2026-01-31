@@ -5,6 +5,8 @@ import AppCard from '../app-card/AppCard';
 interface CategorySectionProps {
   category: Category;
   apps: AppItem[];
+  isInstalled: (appId: string) => boolean;
+  toggleInstalled: (appId: string) => void;
 }
 
 const categoryEmojis: Record<string, string> = {
@@ -17,7 +19,7 @@ const categoryEmojis: Record<string, string> = {
   'safety': '🛡️',
 };
 
-export default function CategorySection({ category, apps }: CategorySectionProps) {
+export default function CategorySection({ category, apps, isInstalled, toggleInstalled }: CategorySectionProps) {
   const { t } = useTranslation('apps');
 
   return (
@@ -33,7 +35,12 @@ export default function CategorySection({ category, apps }: CategorySectionProps
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {apps.map((app) => (
-          <AppCard key={app.id} app={app} />
+          <AppCard
+            key={app.id}
+            app={app}
+            isInstalled={isInstalled(app.id)}
+            onToggleInstalled={() => toggleInstalled(app.id)}
+          />
         ))}
       </div>
     </section>

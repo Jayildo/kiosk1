@@ -28,5 +28,10 @@
   },
   "nav": {
     "allCategories": "全部"
+  },
+  "installed": {
+    "label": "已安装",
+    "markInstalled": "标记安装",
+    "openApp": "打开应用"
   }
 }

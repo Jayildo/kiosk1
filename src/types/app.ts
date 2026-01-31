@@ -8,6 +8,12 @@ export interface AppStoreLinks {
   web?: string;
 }
 
+export interface DeepLinks {
+  ios?: string;
+  android?: string;
+  androidPackage?: string;
+}
+
 export interface AppItem {
   id: string;
   categoryId: string;
@@ -18,6 +24,7 @@ export interface AppItem {
   storeLinks: AppStoreLinks;
   badges: BadgeType[];
   koreanName: string;
+  deepLinks?: DeepLinks;
 }
 
 export interface Category {

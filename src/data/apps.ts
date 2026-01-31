@@ -67,6 +67,11 @@ export const apps: AppItem[] = [
     },
     badges: ['local-essential'],
     koreanName: '네이버 지도',
+    deepLinks: {
+      ios: 'nmap://',
+      android: 'nmap://',
+      androidPackage: 'com.nhn.android.nmap',
+    },
   },
   {
     id: 'kakaomap',
@@ -81,6 +86,11 @@ export const apps: AppItem[] = [
     },
     badges: ['local-essential'],
     koreanName: '카카오맵',
+    deepLinks: {
+      ios: 'kakaomap://',
+      android: 'kakaomap://',
+      androidPackage: 'net.daum.android.map',
+    },
   },
   // Transportation
   {
